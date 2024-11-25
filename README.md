@@ -227,6 +227,8 @@ curl --location --request DELETE 'https://localhost/your-project-path/public/api
 
 ## API CLI Request Example 
 
+![](https://luminova.ng/assets/images/cli-api.png)
+
 First navigate to `public` directory of your project.
 
 #### Users 
