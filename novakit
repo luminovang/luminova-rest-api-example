@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Luminova Framework NovaKit Command Line Tool.
+ *
+ * @package Luminova
+ * @author Ujah Chigozie Peter
+ * @copyright (c) Nanoblock Technology Ltd
+ * @license See LICENSE file
+ */
+use \Luminova\Command\Console;
+use \Luminova\Boot;
+
+/**
+ * Autoload composers 
+ */
+require __DIR__ . '/system/Boot.php';
+
+/**
+ * Location of the framework bootstrap file.
+ */
+Boot::cli();
+
+/**
+ * Ensure the current directory is pointing to the front controller's directory
+ */
+chdir(FRONT_CONTROLLER);
+
+/**
+ * Initialize Terminal Console and Run console instance
+ */
+(new Console())->run($_SERVER['argv'] ?? []);
