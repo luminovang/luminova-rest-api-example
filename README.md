@@ -6,7 +6,7 @@
 
 ## Introduction  
 
-This repository provides a comprehensive example of building a RESTful API using the Luminova PHP framework, showcasing both HTTP and CLI implementations. The example is designed to help developers understand how to create APIs that support full CRUD operations (Create, Read, Update, Delete) and handle various HTTP methods such as `GET`, `POST`, `PUT`, and `DELETE`.  
+This repository provides a comprehensive example of building a RESTful API using the Luminova PHP framework, showcasing both HTTP and CLI implementations. The example is designed to help developers understand how to create APIs that support full CRUD operations (Create, Read, Update, Delete) and handle various HTTP methods such as `GET`, `POST`, `PUT`, and `DELETE`. It also supports secure content delivery through the `Luminova\Storages\FileDelivery` class. This feature enables serving images stored in private directories directly via URL access, eliminating the need for creating symbolic links (`symlinks`).
 
 In addition to HTTP-based API endpoints, this example also demonstrates the power of Luminova's command-line tools, making it possible to perform API-related tasks directly via the CLI. Whether you're looking to seed your database, manage user tokens, or perform backend operations, this repository covers it all.  
 
