@@ -2,7 +2,21 @@
 
 ![Luminova Logo](https://github.com/luminovang/luminova/raw/main/docs/logo.svg)  
 
-This example covers both HTTP and CLI API implementations
+---
+
+## Introduction  
+
+This repository provides a comprehensive example of building a RESTful API using the Luminova PHP framework, showcasing both HTTP and CLI implementations. The example is designed to help developers understand how to create APIs that support full CRUD operations (Create, Read, Update, Delete) and handle various HTTP methods such as `GET`, `POST`, `PUT`, and `DELETE`.  
+
+In addition to HTTP-based API endpoints, this example also demonstrates the power of Luminova's command-line tools, making it possible to perform API-related tasks directly via the CLI. Whether you're looking to seed your database, manage user tokens, or perform backend operations, this repository covers it all.  
+
+By following the provided steps, you can quickly set up an API infrastructure, learn best practices for working with Luminova, and explore features like database migrations, API client authentication, and middleware for rate-limiting or token validation.  
+
+This project is ideal for developers aiming to:  
+- Build scalable and secure APIs for web and mobile applications.  
+- Explore the seamless integration of HTTP and CLI workflows.  
+- Learn Luminova's approach to rapid API development and management.  
+
 
 ---
 
