@@ -19,9 +19,63 @@ This project is ideal for developers aiming to:
 
 ---
 
-## Source Codes
+## Source Files Documentation  
 
-- [CLI Controller](/app/Controllers/Cli/PostsCommand.php) 
+Below is an overview of the primary files involved in the API implementation, organized by functionality and purpose. Each file plays a critical role in building a RESTful API using the Luminova PHP framework.
+
+---
+
+### Controllers  
+
+Controllers handle HTTP and CLI requests, providing routes and business logic for the API.  
+
+#### HTTP Controllers  
+- **[App\Controllers\Http\RestController](/app/Controllers/Http/RestController.php)**  
+  Implements the core API endpoints for CRUD operations. This class handles user authentication, input validation, and database interaction for the `/api/v1/posts` route.  
+
+- **[App\Controllers\Http\Welcome](/app/Controllers/Http/Welcome.php)**  
+  Serves as the main page controller, providing access to the API's landing page. It also manages private file delivery via the `Luminova\Storages\FileDelivery` class.  
+
+#### CLI Controller  
+- **[App\Controllers\Cli\PostsCommand](/app/Controllers/Cli/PostsCommand.php)**  
+  Implements command-line interactions with the API, managing posts and handling API keys for clients.  
+
+---
+
+### Database  
+
+#### Migrations  
+Define the database schema for the API's core entities.  
+- **[App\Database\Migrations\PostsMigration](/app/Database/Migrations/PostsMigration.php)**  
+  Defines the schema for the `posts` table, including fields for `title`, `body`, and relationships with users.  
+
+- **[App\Database\Migrations\UserMigration](/app/Database/Migrations/UserMigration.php)**  
+  Defines the schema for the `users` table, managing user authentication and profile data.  
+
+#### Seeders  
+Populate the database with initial data.  
+- **[App\Database\Seeders\PostsSeeder](/app/Database/Seeders/PostsSeeder.php)**  
+  Inserts sample post data for testing and development purposes.  
+
+- **[App\Database\Seeders\UserSeeder](/app/Database/Seeders/UserSeeder.php)**  
+  Inserts sample user data, including admin and regular user roles.  
+
+---
+
+### Models  
+Models provide a programmatic interface for interacting with the database tables.  
+- **[App\Models\Posts](/app/Models/Posts.php)**  
+  Represents the `posts` table, including relationships to users and validation logic for creating or updating posts.  
+
+- **[App\Models\Users](/app/Models/Users.php)**  
+  Represents the `users` table, managing user-specific operations such as authentication and role assignments.  
+
+---
+
+### Configuration  
+- **[App\Config\Apis](/app/Config/Apis.php)**  
+  Central configuration file for defining HTTP API-related behaviors, such as `allowCredentials`, `allowOrigins`, and `allowHeaders`.  
+
 
 ---
 
