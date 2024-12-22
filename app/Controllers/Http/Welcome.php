@@ -9,7 +9,7 @@
  */
 namespace App\Controllers\Http;
 
-use \Luminova\Base\BaseViewController;
+use \Luminova\Base\BaseController;
 use \Luminova\Attributes\Prefix;
 use \Luminova\Attributes\Route;
 use \App\Controllers\Errors\ViewErrors;
@@ -21,7 +21,7 @@ use \Exception;
     pattern: '/(?!api).*', // Prevent this controller from handling APIs request prefixes.
     onError: [ViewErrors::class, 'onWebError'] // Define error handler for this controller methods.
 )]
-class Welcome extends BaseViewController 
+class Welcome extends BaseController 
 {
     /**
      * Expiration time for cached files (1 year).
